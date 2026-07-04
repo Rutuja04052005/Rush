@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Akash! 🎂 | Friendship Album</title>
+  <meta name="description" content="A premium interactive digital scrapbook birthday website for Akash, celebrating his beautiful friendship with Rutuja.">
+  <meta name="keywords" content="Akash birthday, friendship album, digital scrapbook, happy birthday Akash, interactive scrapbook, best friend and brother">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Happy Birthday Akash! 🎂 | Friendship Album">
+  <meta property="og:description" content="A premium interactive digital scrapbook birthday website for Akash, celebrating his beautiful friendship with Rutuja.">
+  <meta property="og:image" content="assets/images/unbreakable-bond.jpeg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Happy Birthday Akash! 🎂 | Friendship Album">
+  <meta property="twitter:description" content="A premium interactive digital scrapbook birthday website for Akash, celebrating his beautiful friendship with Rutuja.">
+  <meta property="twitter:image" content="assets/images/unbreakable-bond.jpeg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💙</text></svg>">
+  <script type="module" crossorigin src="/assets/index-DvnR2PPv.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-C7sg1qBd.css">
+</head>
+
+<body>
+
+  <!-- Premium Animated Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-container">
+      <!-- Panda Image with floating elements wrap -->
+      <div class="panda-wrapper">
+        <img src="/assets/panda-D8Qiwoh1.jpg" alt="Cute Panda" class="loading-panda">
+        <div class="floating-decorations">
+          <span class="float-heart">❤️</span>
+          <span class="float-sparkle">✨</span>
+          <span class="float-star">⭐</span>
+          <span class="float-heart" style="animation-delay: 1.5s;">💖</span>
+          <span class="float-sparkle" style="animation-delay: 2s;">✨</span>
+        </div>
+      </div>
+      <!-- Loading Text -->
+      <h2 class="loading-text">Preparing Beautiful Memories... ❤️</h2>
+      <p class="loading-subtext">Please Wait...</p>
+      <!-- Progress Bar & Percentage -->
+      <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="progress-percentage" id="progress-percentage">0%</div>
+    </div>
+  </div>
+
+  <!-- Background Particles Canvas (Petals, leaves, sparkles, fireworks) -->
+  <canvas id="bg-canvas"></canvas>
+
+
+
+  <!-- Floating Audio controls -->
+  <div class="music-controller" id="music-controller">
+    <div class="music-album-art" id="music-album-art">
+      <img src="/assets/unbreakable-bond-DbGkJPqr.jpeg" id="music-album-img" alt="Album Cover">
+    </div>
+    <div class="music-info">
+      <div class="music-status" id="music-status">Sound Off</div>
+      <div class="music-title-wrap">
+        <span class="music-title" id="music-title">Tenu Sang Rakhna</span>
+      </div>
+    </div>
+    <div class="volume-control-wrap">
+      <span class="volume-icon">🔊</span>
+      <input type="range" id="volume-slider" class="volume-slider" min="0" max="1" step="0.05" value="0.3"
+        aria-label="Volume Control">
+    </div>
+    <div class="music-visualizer" id="music-visualizer" aria-hidden="true">
+      <div class="visualizer-bar"></div>
+      <div class="visualizer-bar"></div>
+      <div class="visualizer-bar"></div>
+      <div class="visualizer-bar"></div>
+    </div>
+    <button class="music-btn" id="music-btn" aria-label="Toggle Background Music">
+      🎵
+    </button>
+  </div>
+
+  <!-- Background Music Audio Elements -->
+  <audio id="bg-music-1" loop preload="auto">
+    <source src="/assets/tenu-sang-rakhna-Da2mCn-b.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="bg-music-2" loop preload="auto">
+    <source src="/assets/nacha-meri-jaan-D0rOVQjC.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Sticky Floating Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-main">
+      <div class="nav-brand-group">
+        <a href="#hero" class="nav-logo">
+          💙 RUSH
+        </a>
+        <span class="nav-subtitle">Best Friend &bull; Best Brother</span>
+      </div>
+      <nav aria-label="Main Navigation" class="desktop-nav">
+        <ul class="nav-links" id="nav-links">
+          <li class="nav-item active"><a href="#hero">📖 Home</a></li>
+          <li class="nav-item"><a href="#cake-ceremony">🎂 Cake Cutting</a></li>
+          <li class="nav-item"><a href="#birthday-wishes">💌 Wishes</a></li>
+          <li class="nav-item"><a href="#why-special">💖 About</a></li>
+          <li class="nav-item"><a href="#journey">🛤️ Journey</a></li>
+          <li class="nav-item"><a href="#favorite-memory">💖 Memory</a></li>
+          <li class="nav-item"><a href="#photo-wall">📸 Gallery</a></li>
+          <li class="nav-item"><a href="#memory-book">📖 Book</a></li>
+          <li class="nav-item"><a href="#secret-letter">💌 Letter</a></li>
+          <li class="nav-item"><a href="#ending-screen">✨ Finale</a></li>
+        </ul>
+      </nav>
+      <div class="navbar-controls">
+        <button class="nav-ctrl-btn" id="nav-music-btn" aria-label="Toggle music play state">
+          <span class="nav-music-icon">🎵</span>
+          <span class="nav-music-text">Play</span>
+          <div class="nav-music-eq" id="nav-music-eq" aria-hidden="true">
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+          </div>
+        </button>
+        <!-- Mobile hamburger menu button -->
+        <button class="nav-toggle-btn" id="nav-toggle-btn" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Links Dropdown -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation">
+      <ul class="mobile-nav-links">
+        <li class="nav-item active"><a href="#hero">📖 Home</a></li>
+        <li class="nav-item"><a href="#cake-ceremony">🎂 Cake Cutting</a></li>
+        <li class="nav-item"><a href="#birthday-wishes">💌 Wishes</a></li>
+        <li class="nav-item"><a href="#why-special">💖 About</a></li>
+        <li class="nav-item"><a href="#journey">🛤️ Journey</a></li>
+        <li class="nav-item"><a href="#favorite-memory">💖 Memory</a></li>
+        <li class="nav-item"><a href="#photo-wall">📸 Gallery</a></li>
+        <li class="nav-item"><a href="#memory-book">📖 Book</a></li>
+        <li class="nav-item"><a href="#secret-letter">💌 Letter</a></li>
+        <li class="nav-item"><a href="#ending-screen">✨ Finale</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+    <!-- Hero / Welcome Section (Redesigned Illustrated Birthday Scrapbook) -->
+    <section id="hero" class="scrapbook-hero">
+      <!-- Party Bunting Flags -->
+      <div class="party-buntings" aria-hidden="true">
+        <span class="flag flag-blue"></span>
+        <span class="flag flag-yellow"></span>
+        <span class="flag flag-pink"></span>
+        <span class="flag flag-green"></span>
+        <span class="flag flag-orange"></span>
+        <span class="flag flag-purple"></span>
+        <span class="flag flag-yellow"></span>
+        <span class="flag flag-blue"></span>
+        <span class="flag flag-pink"></span>
+      </div>
+
+      <!-- Background Particle Animations Hook -->
+      <div class="hero-particles-container" id="hero-particles-container" aria-hidden="true"></div>
+
+      <!-- Illustrated Background Doodles -->
+      <div class="doodle-decor doodle-balloons" aria-hidden="true">
+        <svg viewBox="0 0 100 150" class="balloon-svg">
+          <ellipse cx="40" cy="50" rx="20" ry="25" fill="#f1c40f" opacity="0.95" />
+          <path d="M40 75 L38 80 L42 80 Z" fill="#d4ac0d" />
+          <ellipse cx="60" cy="65" rx="18" ry="22" fill="#3498db" opacity="0.95" />
+          <path d="M60 87 L58 92 L62 92 Z" fill="#2980b9" />
+          <ellipse cx="30" cy="80" rx="18" ry="22" fill="#e91e63" opacity="0.95" />
+          <path d="M30 102 L28 107 L32 107 Z" fill="#c2185b" />
+          <path d="M40 80 Q45 110 50 140" stroke="#7f8c8d" stroke-width="1.5" fill="none" />
+          <path d="M60 92 Q55 115 50 140" stroke="#7f8c8d" stroke-width="1.5" fill="none" />
+          <path d="M30 107 Q40 125 50 140" stroke="#7f8c8d" stroke-width="1.5" fill="none" />
+        </svg>
+      </div>
+
+      <div class="doodle-decor doodle-cake" aria-hidden="true">
+        <svg viewBox="0 0 100 100" class="cake-svg">
+          <ellipse cx="50" cy="85" rx="40" ry="8" fill="#bdc3c7" />
+          <rect x="20" y="55" width="60" height="25" rx="4" fill="#9b59b6" />
+          <rect x="20" y="62" width="60" height="5" fill="#f1c40f" />
+          <rect x="30" y="35" width="40" height="20" rx="4" fill="#e74c3c" />
+          <rect x="30" y="42" width="40" height="4" fill="#2ecc71" />
+          <rect x="42" y="20" width="3" height="15" fill="#f1c40f" />
+          <path d="M43.5 15 Q45 10 43.5 5 Q42 10 43.5 15 Z" fill="#e67e22" />
+          <rect x="55" y="20" width="3" height="15" fill="#3498db" />
+          <path d="M56.5 15 Q58 10 56.5 5 Q55 10 56.5 15 Z" fill="#e67e22" />
+        </svg>
+      </div>
+
+      <div class="doodle-decor doodle-gift" aria-hidden="true">
+        <svg viewBox="0 0 100 100" class="gift-svg">
+          <rect x="25" y="40" width="50" height="50" rx="2" fill="#e67e22" />
+          <rect x="20" y="30" width="60" height="12" rx="2" fill="#d35400" />
+          <rect x="46" y="30" width="8" height="60" fill="#f1c40f" />
+          <rect x="25" y="60" width="50" height="8" fill="#f1c40f" />
+          <path d="M38 30 Q28 15 46 25 Q46 30 46 30 Z" fill="#f1c40f" />
+          <path d="M62 30 Q72 15 54 25 Q54 30 54 30 Z" fill="#f1c40f" />
+        </svg>
+      </div>
+
+      <div class="doodle-decor doodle-stars" aria-hidden="true">✨⭐✨</div>
+
+      <!-- Decorative Scrapbook Stickers -->
+      <div class="scrapbook-sticker sticker-panda" aria-hidden="true">🐼</div>
+      <div class="scrapbook-sticker sticker-bear" aria-hidden="true">🧸</div>
+      <div class="scrapbook-sticker sticker-cloud-1" aria-hidden="true">☁️</div>
+      <div class="scrapbook-sticker sticker-cloud-2" aria-hidden="true">☁️</div>
+      <div class="scrapbook-sticker sticker-flower-1" aria-hidden="true">🌸</div>
+      <div class="scrapbook-sticker sticker-flower-2" aria-hidden="true">🌻</div>
+      <div class="scrapbook-sticker sticker-heart-1" aria-hidden="true">💖</div>
+      <div class="scrapbook-sticker sticker-heart-2" aria-hidden="true">❤️</div>
+
+      <!-- Core Hero Layout Container -->
+      <div class="hero-layout-container">
+        <!-- Left: Text content, quote, countdown, actions -->
+        <div class="hero-text-block">
+          <div class="rush-logo glowing"
+            style="--rush-rot: -1.5deg; margin-bottom: 1.5rem; font-size: 2.2rem; display: inline-block;">RUSH 💙</div>
+
+          <h1 class="hero-birthday-title-premium">🎂 Happy Birthday Aksha</h1>
+
+          <h2 class="hero-birthday-subtitle-premium">My Best Friend • My Brother • My Forever Family ❤️</h2>
+
+          <p class="hero-birthday-quote-premium">
+            "Some people become family by blood. You became my family by heart. Thank you for always standing beside
+            me."
+          </p>
+
+          <!-- Integrated Countdown Component -->
+          <div class="countdown-container" style="margin: 1.5rem 0; width: 100%;">
+            <div id="countdown-timer-wrapper"
+              style="display: flex; gap: 0.8rem; justify-content: flex-start; flex-wrap: wrap;">
+              <div class="countdown-card-premium">
+                <span class="countdown-value" id="days">00</span>
+                <span class="countdown-label">Days</span>
+              </div>
+              <div class="countdown-card-premium">
+                <span class="countdown-value" id="hours">00</span>
+                <span class="countdown-label">Hours</span>
+              </div>
+              <div class="countdown-card-premium">
+                <span class="countdown-value" id="minutes">00</span>
+                <span class="countdown-label">Mins</span>
+              </div>
+              <div class="countdown-card-premium">
+                <span class="countdown-value" id="seconds">00</span>
+                <span class="countdown-label">Secs</span>
+              </div>
+            </div>
+            <div id="birthday-special-banner"
+              style="display: none; font-size: 2rem; font-family: var(--font-handwriting); color: var(--accent-gold); font-weight: bold; margin-top: 1rem; text-align: left; animation: star-blink 2s infinite alternate;">
+              🎉 Today is Your Special Day! 🎉
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-action-buttons-wrap">
+            <a href="#cake-ceremony" class="premium-hero-btn btn-gradient-gold scroll-link" id="btn-celebrate-now">
+              <span>🎉 Celebrate Birthday</span>
+            </a>
+            <a href="#photo-wall" class="premium-hero-btn btn-outline-white scroll-link">
+              <span>📸 View Memories</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Polaroid Scrapbook Collage -->
+        <div class="hero-collage-block">
+          <!-- Main Polaroid (Center Focus) -->
+          <div class="main-polaroid">
+            <span class="washi-tape washi-gold" style="top: -15px; left: 35%;"></span>
+            <div class="photo-zoom-container">
+              <img src="/assets/pic-13-CRxeZEqa.jpeg" alt="Aksha Unbreakable Bond">
+            </div>
+            <div class="polaroid-caption">Unbreakable Bond 💙</div>
+          </div>
+
+          <!-- Floating Polaroid Cards Around Center -->
+          <!-- Card 1: pic-2 -->
+          <div class="floating-polaroid fp-1">
+            <span class="washi-tape washi-pink" style="top: -10px; left: 25%;"></span>
+            <img src="/assets/pic-2-CXJAp1wl.jpeg" alt="Memory Photo 2">
+          </div>
+          <!-- Card 2: pic-3 -->
+          <div class="floating-polaroid fp-2">
+            <span class="washi-tape washi-purple" style="top: -10px; left: 30%;"></span>
+            <img src="/assets/pic-3-aRU47h96.jpeg" alt="Memory Photo 3">
+          </div>
+          <!-- Card 3: pic-4 -->
+          <div class="floating-polaroid fp-3">
+            <span class="washi-tape washi-grey" style="top: -10px; left: 20%;"></span>
+            <img src="/assets/pic-4-3M39-KbR.jpeg" alt="Memory Photo 4">
+          </div>
+          <!-- Card 4: pic-5 -->
+          <div class="floating-polaroid fp-4">
+            <span class="washi-tape washi-gold" style="top: -10px; left: 35%;"></span>
+            <img src="/assets/pic-5-Cb5H_tGj.jpeg" alt="Memory Photo 5">
+          </div>
+          <!-- Card 5: pic-6 -->
+          <div class="floating-polaroid fp-5">
+            <span class="washi-tape washi-pink" style="top: -10px; left: 25%;"></span>
+            <img src="/assets/pic-6-CTPmkgi9.jpeg" alt="Memory Photo 6">
+          </div>
+          <!-- Card 6: pic-7 -->
+          <div class="floating-polaroid fp-6">
+            <span class="washi-tape washi-purple" style="top: -10px; left: 30%;"></span>
+            <img src="/assets/pic-7-Szc4umb4.jpeg" alt="Memory Photo 7">
+          </div>
+          <!-- Card 7: pic-8 -->
+          <div class="floating-polaroid fp-7">
+            <span class="washi-tape washi-gold" style="top: -10px; left: 20%;"></span>
+            <img src="/assets/pic-8-Br4Mj_Bs.jpeg" alt="Memory Photo 8">
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator at bottom -->
+      <div class="hero-scroll-indicator-premium">
+        <div class="mouse-icon">
+          <span class="mouse-wheel"></span>
+        </div>
+        <span class="scroll-text">Scroll to Begin the Celebration</span>
+      </div>
+    </section>
+
+    <!-- 🎂 Page 2: Cake Cutting Ceremony -->
+    <section id="cake-ceremony" class="cake-ceremony-section torn-top torn-bottom">
+      <!-- Fairy Lights -->
+      <div class="fairy-lights" aria-hidden="true">
+        <span class="light bulb-red"></span>
+        <span class="light bulb-gold"></span>
+        <span class="light bulb-blue"></span>
+        <span class="light bulb-green"></span>
+        <span class="light bulb-pink"></span>
+        <span class="light bulb-purple"></span>
+        <span class="light bulb-yellow"></span>
+        <span class="light bulb-red"></span>
+        <span class="light bulb-gold"></span>
+        <span class="light bulb-blue"></span>
+        <span class="light bulb-green"></span>
+        <span class="light bulb-pink"></span>
+        <span class="light bulb-purple"></span>
+        <span class="light bulb-yellow"></span>
+      </div>
+
+      <!-- Hanging Birthday Banner -->
+      <div class="ceremony-banner" aria-hidden="true">
+        <span class="banner-flag" style="--flag-index: 1;">H</span>
+        <span class="banner-flag" style="--flag-index: 2;">A</span>
+        <span class="banner-flag" style="--flag-index: 3;">P</span>
+        <span class="banner-flag" style="--flag-index: 4;">P</span>
+        <span class="banner-flag" style="--flag-index: 5;">Y</span>
+        <span class="banner-flag" style="--flag-index: 6;"> </span>
+        <span class="banner-flag" style="--flag-index: 7;">B</span>
+        <span class="banner-flag" style="--flag-index: 8;">I</span>
+        <span class="banner-flag" style="--flag-index: 9;">R</span>
+        <span class="banner-flag" style="--flag-index: 10;">T</span>
+        <span class="banner-flag" style="--flag-index: 11;">H</span>
+        <span class="banner-flag" style="--flag-index: 12;">D</span>
+        <span class="banner-flag" style="--flag-index: 13;">A</span>
+        <span class="banner-flag" style="--flag-index: 14;">Y</span>
+      </div>
+
+      <!-- Gift boxes in corners -->
+      <div class="ceremony-gift gift-left" aria-hidden="true">🎁</div>
+      <div class="ceremony-gift gift-right" aria-hidden="true">💝</div>
+
+      <!-- Full-screen Ceremony Canvas for Stars, Lanterns, Fireflies, Fireworks -->
+      <canvas id="ceremony-canvas"></canvas>
+
+      <div class="section-header" id="ceremony-header">
+        <h2 class="section-title">Page 2: <span id="ceremony-title-span">Make A Birthday Wish 🎂</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle" id="ceremony-subtitle-text">Time to Cut the Birthday Cake</p>
+      </div>
+
+      <!-- Stage 1 Intro Banner (Birthday Celebration Begins) -->
+      <div id="ceremony-intro-banner" class="ceremony-intro-banner">
+        <h2>🎂 Birthday Celebration Begins 🎂</h2>
+      </div>
+
+      <!-- Central Cinematic Stage Card -->
+      <div class="ceremony-cake-card grid-paper" id="ceremony-stage-card">
+        <!-- Progress Stepper Indicator -->
+        <div class="ceremony-stepper">
+          <div class="step-indicator active" data-step="1" id="step-1-indicator">
+            <div class="step-number">1</div>
+            <div class="step-label">Light Candles</div>
+          </div>
+          <div class="step-connector" id="connector-1"></div>
+          <div class="step-indicator" data-step="2" id="step-2-indicator">
+            <div class="step-number">2</div>
+            <div class="step-label">Make Wish</div>
+          </div>
+          <div class="step-connector" id="connector-2"></div>
+          <div class="step-indicator" data-step="3" id="step-3-indicator">
+            <div class="step-number">3</div>
+            <div class="step-label">Blow Candles</div>
+          </div>
+          <div class="step-connector" id="connector-3"></div>
+          <div class="step-indicator" data-step="4" id="step-4-indicator">
+            <div class="step-number">4</div>
+            <div class="step-label">Cut Cake</div>
+          </div>
+          <div class="step-connector" id="connector-4"></div>
+          <div class="step-indicator" data-step="5" id="step-5-indicator">
+            <div class="step-number">5</div>
+            <div class="step-label">Celebrate</div>
+          </div>
+        </div>
+
+        <!-- 3D Birthday Cake Stage -->
+        <div class="ceremony-cake-container" id="ceremony-cake-container">
+          <!-- Knife Overlay -->
+          <div class="cake-knife" id="cake-knife">🔪</div>
+
+          <svg class="ceremony-cake-svg" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <clipPath id="left-clip">
+                <rect x="-50" y="-50" width="150" height="300" />
+              </clipPath>
+              <clipPath id="right-clip">
+                <rect x="100" y="-50" width="150" height="300" />
+              </clipPath>
+            </defs>
+
+            <!-- Plate / Stand -->
+            <ellipse cx="100" cy="195" rx="75" ry="12" fill="var(--grey-paper)" />
+            <path d="M45 195 L155 195 L135 208 L65 208 Z" fill="var(--ink-purple-muted)" opacity="0.8" />
+
+            <!-- Center Filling Reveal -->
+            <g class="cake-filling-reveal" id="cake-filling">
+              <rect x="96" y="75" width="8" height="115" fill="#f5c2c9" />
+              <line x1="96" y1="90" x2="104" y2="90" stroke="#fff" stroke-width="3" />
+              <line x1="96" y1="110" x2="104" y2="110" stroke="#fff" stroke-width="3" />
+              <line x1="96" y1="130" x2="104" y2="130" stroke="#fff" stroke-width="3" />
+              <line x1="96" y1="150" x2="104" y2="150" stroke="#fff" stroke-width="3" />
+              <line x1="96" y1="170" x2="104" y2="170" stroke="#fff" stroke-width="3" />
+            </g>
+
+            <!-- Left Half of the Cake -->
+            <g class="cake-left" clip-path="url(#left-clip)">
+              <!-- Bottom tier -->
+              <path d="M30 145 C30 160, 170 160, 170 145 L170 185 C170 195, 30 195, 30 185 Z"
+                fill="var(--pink-paper)" />
+              <path d="M30 145 C30 152, 170 152, 170 145 C170 147, 170 149, 170 151 C170 160, 30 160, 30 151 Z"
+                fill="var(--lavender-paper)" />
+              <path d="M30 151 Q45 162, 60 151 Q75 162, 90 151 L90 156 Q75 167, 60 156 Q45 167, 30 156 Z" fill="#ff4d6d"
+                opacity="0.85" />
+
+              <!-- Middle tier -->
+              <path d="M48 105 C48 118, 152 118, 152 105 L152 145 C152 152, 48 152, 48 145 Z"
+                fill="var(--lavender-paper)" />
+              <path d="M48 105 C48 111, 152 111, 152 105 C152 107, 152 109, 152 111 C152 118, 48 118, 48 111 Z"
+                fill="var(--cream-paper)" />
+              <path d="M48 111 Q60 119, 72 111 Q84 119, 96 111 L96 116 Q84 124, 72 116 Q60 124, 48 116 Z" fill="#ff4d6d"
+                opacity="0.85" />
+
+              <!-- Top tier -->
+              <path d="M66 70 C66 80, 134 80, 134 70 L134 105 C134 112, 66 112, 66 105 Z" fill="var(--cream-paper)" />
+              <path d="M66 70 C66 75, 134 75, 134 70 C134 72, 134 74, 134 75 C134 80, 66 80, 66 75 Z"
+                fill="var(--pink-paper)" />
+
+              <!-- Gold decorations text and sparkles -->
+              <text x="100" y="175" font-family="'Great Vibes', cursive" font-size="14" fill="#FFD166"
+                font-weight="bold" text-anchor="middle">Happy Birthday Aksha</text>
+              <circle cx="55" cy="125" r="2.5" fill="var(--accent-gold)" />
+              <circle cx="70" cy="135" r="2" fill="var(--white)" />
+              <circle cx="48" cy="165" r="3" fill="var(--accent-gold)" />
+              <circle cx="65" cy="175" r="2.5" fill="var(--white)" />
+              <circle cx="85" cy="162" r="2" fill="var(--accent-gold)" />
+
+              <!-- Candle 1 -->
+              <rect x="82" y="38" width="5" height="32" fill="var(--accent-gold)" rx="1" />
+              <g class="candle-flame ceremony-flame" id="ceremony-flame-1">
+                <ellipse cx="84.5" cy="30" rx="3.5" ry="8" fill="#f7d560" filter="drop-shadow(0 0 6px #f7d560)" />
+                <ellipse cx="84.5" cy="32" rx="1.5" ry="5" fill="#e74c3c" />
+              </g>
+
+              <!-- Candle 2 -->
+              <rect x="97.5" y="33" width="5" height="37" fill="var(--accent-gold)" rx="1" />
+              <g class="candle-flame ceremony-flame" id="ceremony-flame-2">
+                <ellipse cx="100" cy="25" rx="3.5" ry="8" fill="#f7d560" filter="drop-shadow(0 0 6px #f7d560)" />
+                <ellipse cx="100" cy="27" rx="1.5" ry="5" fill="#e74c3c" />
+              </g>
+            </g>
+
+            <!-- Right Half of the Cake -->
+            <g class="cake-right" clip-path="url(#right-clip)">
+              <!-- Bottom tier -->
+              <path d="M30 145 C30 160, 170 160, 170 145 L170 185 C170 195, 30 195, 30 185 Z"
+                fill="var(--pink-paper)" />
+              <path d="M30 145 C30 152, 170 152, 170 145 C170 147, 170 149, 170 151 C170 160, 30 160, 30 151 Z"
+                fill="var(--lavender-paper)" />
+              <path d="M110 151 Q125 162, 140 151 Q155 162, 170 156 L170 151 Q155 156, 140 156 Q125 156, 110 156 Z"
+                fill="#ff4d6d" opacity="0.85" />
+
+              <!-- Middle tier -->
+              <path d="M48 105 C48 118, 152 118, 152 105 L152 145 C152 152, 48 152, 48 145 Z"
+                fill="var(--lavender-paper)" />
+              <path d="M48 105 C48 111, 152 111, 152 105 C152 107, 152 109, 152 111 C152 118, 48 118, 48 111 Z"
+                fill="var(--cream-paper)" />
+              <path d="M108 111 Q120 119, 132 111 Q144 119, 152 116 L152 111 Q144 116, 132 116 Q120 116, 108 116 Z"
+                fill="#ff4d6d" opacity="0.85" />
+
+              <!-- Top tier -->
+              <path d="M66 70 C66 80, 134 80, 134 70 L134 105 C134 112, 66 112, 66 105 Z" fill="var(--cream-paper)" />
+              <path d="M66 70 C66 75, 134 75, 134 70 C134 72, 134 74, 134 75 C134 80, 66 80, 66 75 Z"
+                fill="var(--pink-paper)" />
+
+              <!-- Gold decorations text and sparkles -->
+              <text x="100" y="175" font-family="'Great Vibes', cursive" font-size="14" fill="#FFD166"
+                font-weight="bold" text-anchor="middle">Happy Birthday Aksha</text>
+              <circle cx="120" cy="120" r="2" fill="var(--white)" />
+              <circle cx="138" cy="115" r="2.5" fill="var(--accent-gold)" />
+              <circle cx="115" cy="165" r="2" fill="var(--accent-gold)" />
+              <circle cx="130" cy="170" r="3" fill="var(--white)" />
+              <circle cx="148" cy="165" r="2.5" fill="var(--accent-gold)" />
+
+              <!-- Candle 3 -->
+              <rect x="113" y="38" width="5" height="32" fill="var(--accent-gold)" rx="1" />
+              <g class="candle-flame ceremony-flame" id="ceremony-flame-3">
+                <ellipse cx="115.5" cy="30" rx="3.5" ry="8" fill="#f7d560" filter="drop-shadow(0 0 6px #f7d560)" />
+                <ellipse cx="115.5" cy="32" rx="1.5" ry="5" fill="#e74c3c" />
+              </g>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Step Panels -->
+        <div class="ceremony-step-panel active show-active" id="panel-step-1">
+          <h3 class="ceremony-message" style="margin-top: 0.5rem; margin-bottom: 1.5rem;">Let's light the candles ✨</h3>
+          <button class="ceremony-action-btn" id="btn-light-candles">🕯️ Light Candles</button>
+        </div>
+
+        <div class="ceremony-step-panel" id="panel-step-2">
+          <div class="wish-message-container"
+            style="max-width: 700px; margin: 0 auto; padding: 2.5rem; border-radius: 16px; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); box-shadow: var(--shadow-polaroid); border: 1px solid rgba(255, 255, 255, 0.4); margin-bottom: 2rem;">
+            <h4 class="wish-small-heading"
+              style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; color: var(--accent-gold); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1.5px; text-align: center;">
+              🎉 Today Is Your Special Day</h4>
+            <h1 class="wish-main-heading"
+              style="font-family: 'Playfair Display', serif; font-size: 2.6rem; color: var(--ink-purple); font-weight: 800; margin-bottom: 1.5rem; text-align: center; animation: glowText 2.5s infinite alternate;">
+              ✨ Make A Birthday Wish ✨</h1>
+
+            <div class="heartfelt-wish-message"
+              style="font-family: 'Poppins', sans-serif; font-size: 1.05rem; line-height: 1.7; color: var(--ink-purple-muted); text-align: left; display: flex; flex-direction: column; gap: 1.2rem;">
+              <p style="font-weight: 600; font-size: 1.15rem; color: var(--ink-purple);">Dear Aksha,</p>
+              <p>Today is more than just another day—it's a celebration of the wonderful person you are. Thank you for
+                every smile, every laugh, every adventure, and every unforgettable memory we've shared.</p>
+              <p style="font-weight: 600; color: var(--ink-purple);">Before we celebrate with the cake, take a quiet
+                moment to close your eyes and make a wish.</p>
+              <p>May this new chapter of your life bring you endless happiness, success, good health, peace, and
+                beautiful memories.</p>
+              <p>May every dream you cherish become reality, and may your smile always shine as brightly as it does
+                today.</p>
+              <p
+                style="font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: var(--accent-gold); font-weight: 700; text-align: right; margin-top: 1rem; margin-bottom: 0;">
+                Happy Birthday, My Dear Bestuuu! ❤️</p>
+            </div>
+          </div>
+
+          <div class="wish-instruction-wrap" style="margin-bottom: 1.5rem; text-align: center;">
+            <h3 class="ceremony-message" id="wish-instruction-text"
+              style="font-family: 'Poppins', sans-serif; font-size: 1.25rem; font-weight: 600; color: var(--ink-purple); transition: all 0.5s ease;">
+              ✨ Make a wish and let the countdown complete...
+            </h3>
+            <div class="wish-countdown" id="wish-countdown-number"
+              style="font-family: 'Poppins', sans-serif; font-size: 3rem; font-weight: 800; color: var(--accent-gold); margin: 0.8rem 0;">
+              5</div>
+          </div>
+          <button class="ceremony-action-btn" id="btn-wish-made" style="padding: 1rem 3rem; font-size: 1.15rem;"
+            disabled>🎂 Blow Out the Candles</button>
+        </div>
+
+        <div class="ceremony-step-panel" id="panel-step-3">
+          <div class="wish-sent-card"
+            style="max-width: 600px; margin: 0 auto; padding: 3rem 2rem; border-radius: 16px; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); box-shadow: var(--shadow-polaroid); border: 1px solid rgba(255, 255, 255, 0.4); text-align: center; margin-bottom: 2rem;">
+            <h2
+              style="font-family: 'Playfair Display', serif; font-size: 2.4rem; color: var(--ink-purple); font-weight: 700; margin-bottom: 1rem;">
+              🌟 Your wish has been sent to the stars.</h2>
+            <p
+              style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; color: var(--ink-purple-muted); margin-bottom: 2rem;">
+              Close your eyes, feel the magic, and let's begin the celebration!</p>
+            <button class="ceremony-action-btn" id="btn-blow-candles" style="padding: 1rem 3rem; font-size: 1.15rem;">🍰
+              Continue to Cake Cutting</button>
+          </div>
+        </div>
+
+        <div class="ceremony-step-panel" id="panel-step-4">
+          <h3 class="ceremony-message" style="margin-top: 0.5rem; margin-bottom: 1.5rem;">Time to cut the cake 🎂</h3>
+          <button class="ceremony-action-btn" id="btn-cut-cake">🔪 Cut The Cake</button>
+        </div>
+
+        <div class="ceremony-step-panel" id="panel-step-5">
+          <div class="celebration-wrapper"
+            style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+            <h1 class="celebration-title">🎉 HAPPY BIRTHDAY AKASH 🎉</h1>
+            <p class="heartfelt-message">
+              May your day be filled with happiness,<br>
+              laughter, love, and unforgettable memories.
+            </p>
+            <div
+              style="font-family: var(--font-handwriting); font-size: 1.8rem; color: var(--accent-gold); font-weight: bold; margin-top: 0.5rem; text-align: center;">
+              ❤️ From Rutuja
+            </div>
+            <div style="margin-top: 1.5rem; text-align: center;">
+              <div class="rush-logo glowing" id="ceremony-rush-logo" style="display: inline-flex; opacity: 1;">RUSH 💙
+              </div>
+            </div>
+            <a href="#birthday-wishes" class="ceremony-action-btn scroll-link" id="btn-celebration-done"
+              style="margin-top: 1.5rem; text-decoration: none; display: inline-block;">Continue to Birthday Wishes
+              ❤️</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 💌 Page 3: Birthday Wishes Section -->
+    <section id="birthday-wishes" class="special-section torn-top torn-bottom"
+      style="background: var(--pink-paper); min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <div class="section-header">
+        <h2 class="section-title">Page 3: Heartfelt <span>Birthday Wishes</span> 💌</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="quotes-container"
+        style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 3rem; max-width: 1000px; margin: 0 auto; padding: 2rem;">
+        <!-- Wishes Content Card -->
+        <div class="wishes-card grid-paper"
+          style="flex: 1; min-width: 300px; padding: 2.5rem; border-radius: 12px; box-shadow: var(--shadow-polaroid); background: var(--white); position: relative; transform: rotate(-1deg);">
+          <span class="washi-tape washi-pink" style="top: -15px; left: 30%;"></span>
+          <h3
+            style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--ink-purple); margin-bottom: 1.5rem; text-align: center;">
+            Happy Birthday Akash!</h3>
+          <p
+            style="font-family: var(--font-handwriting); font-size: 1.6rem; color: var(--ink-purple-muted); line-height: 1.6; margin-bottom: 1.5rem; text-align: justify;">
+            You're not just my best friend—you are my brother. Thank you for every laugh, every adventure, and every
+            unforgettable memory. I wish you happiness, success, good health, and endless joy. May all your dreams come
+            true. Stay the amazing person you are.
+          </p>
+          <div
+            style="font-family: var(--font-handwriting); font-size: 1.8rem; color: var(--accent-gold); font-weight: bold; text-align: right; margin-top: 1rem;">
+            Happy Birthday, Brother! ❤️🎂
+          </div>
+        </div>
+
+        <!-- Favorite Photo Polaroid -->
+        <div class="polaroid-card"
+          style="width: 320px; text-align: center; transform: rotate(2deg); flex-shrink: 0; box-shadow: var(--shadow-polaroid);">
+          <span class="washi-tape washi-purple"></span>
+          <div class="photo-zoom-container">
+            <img src="/assets/bestuu-qkHY-Rmo.jpeg" alt="Favorite Memory with Akash"
+              style="width: 100%; aspect-ratio: 0.75; object-fit: cover; border: 1px solid rgba(0,0,0,0.06); display: block;">
+          </div>
+          <div class="polaroid-caption">Bro + Best Friend = Unbreakable Bond 💙</div>
+        </div>
+      </div>
+
+      <!-- Action Button to Continue to Journey -->
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="#why-special" class="ceremony-action-btn scroll-link float-anim"
+          style="text-decoration: none; padding: 1rem 2.5rem; font-size: 1.15rem; font-weight: bold; border-radius: 50px; display: inline-block;">
+          Continue to Our Journey 🛤️
+        </a>
+      </div>
+    </section>
+
+    <!-- 💖 Chapter 1: Why You're Special -->
+    <section id="why-special" class="special-section torn-top torn-bottom">
+      <div class="section-header">
+        <h2 class="section-title">Chapter 1: <span>Reasons You're Special To Me 💙</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Hover over these scrap cards to see why your friendship is my greatest treasure.</p>
+      </div>
+
+      <div class="special-grid">
+        <!-- Card 1 -->
+        <div class="special-card">
+          <div class="special-icon">🌸</div>
+          <h3>Your Kindness</h3>
+          <p>You have a heart that always seeks to heal, listen, and comfort. You bring light wherever you walk.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="special-card">
+          <div class="special-icon">☀️</div>
+          <h3>Your Smile</h3>
+          <p>Your smile is contagious enough to brighten the cloudiest day and make any heavy moment light.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="special-card">
+          <div class="special-icon">💪</div>
+          <h3>Your Support</h3>
+          <p>Knowing you are always in my corner, cheering, holding my hand, and believing in me is my safety anchor.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="special-card">
+          <div class="special-icon">✨</div>
+          <h3>Your Positivity</h3>
+          <p>You find hope in the small things and remind me of the beauty of tomorrow when I lose track.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="special-card">
+          <div class="special-icon">💙</div>
+          <h3>Your Friendship</h3>
+          <p>An unconditional bond of trust, secrets, and comfort that has grown into my most precious constant.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🤝 Chapter 2: Our Beginning -->
+    <section id="journey">
+      <div class="section-header">
+        <h2 class="section-title">Chapter 2: <span>Every Great Story Starts With One Hello 🤝</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">The first chapters in our book of memories. Click cards to view details.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Meeting -->
+        <div class="timeline-item">
+          <div class="timeline-date">College Days</div>
+          <div class="timeline-content">
+            <div class="polaroid-card">
+              <span class="washi-tape washi-pink"></span>
+              <img src="/assets/pic-14-aUNjGwJZ.jpeg" alt="College learning together">
+              <h3>Learning Together 🤝</h3>
+              <p>From classrooms to workplaces, we've always supported each other and grown side-by-side.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- First Conversation -->
+        <div class="timeline-item">
+          <div class="timeline-date">First Memories</div>
+          <div class="timeline-content">
+            <div class="polaroid-card">
+              <span class="washi-tape washi-purple"></span>
+              <img src="/assets/pic-3-aRU47h96.jpeg" alt="Restaurant selfie first memory">
+              <h3>Our First Memories 💬</h3>
+              <p>A simple day, a simple selfie, but memories that still make us smile.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- First Selfie -->
+        <div class="timeline-item">
+          <div class="timeline-date">Relaxing Moments</div>
+          <div class="timeline-content">
+            <div class="polaroid-card">
+              <span class="washi-tape washi-gold"></span>
+              <img src="/assets/pic-8-Br4Mj_Bs.jpeg" alt="Park bench relaxing photo">
+              <h3>Peaceful Conversations ☕</h3>
+              <p>Some of the best memories are made during the simplest conversations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 💖 Chapter 3: Favorite Memory Section -->
+    <section id="favorite-memory" class="special-section torn-top torn-bottom">
+      <div class="section-header">
+        <h2 class="section-title">Chapter 3: Our Favorite <span>Memory</span> 💖</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">"Bro + Best Friend = Unbreakable Bond"</p>
+      </div>
+
+      <div class="quotes-container"
+        style="display: flex; justify-content: center; width: 100%; max-width: 600px; margin: 0 auto;">
+        <div class="polaroid-card"
+          style="text-align: center; width: 100%; max-width: 420px; margin: 2rem auto; transform: rotate(1deg); display: block;">
+          <span class="washi-tape washi-pink"></span>
+          <img src="/assets/my-BoJLDOHo.jpeg" alt="Traditional Outfit Photo"
+            style="width: 100%; aspect-ratio: 0.75; object-fit: cover; border: 1px solid rgba(0,0,0,0.06); display: block;">
+          <div class="polaroid-caption">Bro + Best Friend = Unbreakable Bond 💙</div>
+          <p
+            style="font-family: var(--font-notebook); font-size: 1.1rem; color: var(--ink-purple-muted); margin-top: 1.2rem; line-height: 1.6;">
+            One of our most cherished memories together.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo Wall Lightbox">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">✕</button>
+      <div class="lightbox-content">
+        <img class="lightbox-img" id="lightbox-img" src="" alt="">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+    </div>
+
+    <!-- 📸 Chapter 4: Memory Collection (Photo Wall) -->
+    <section id="photo-wall" class="photo-wall-section torn-top torn-bottom">
+      <div class="section-header">
+        <h2 class="section-title">Chapter 4: <span>Our Memory Wall 📸</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">"Every photo holds a story. Every story holds a smile."</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="gallery-filters" role="tablist">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Pins</button>
+        <button class="filter-btn" data-filter="college" role="tab" aria-selected="false">🎓 College</button>
+        <button class="filter-btn" data-filter="cafe" role="tab" aria-selected="false">☕ Café</button>
+        <button class="filter-btn" data-filter="birthdays" role="tab" aria-selected="false">🎂 Birthday</button>
+        <button class="filter-btn" data-filter="trips" role="tab" aria-selected="false">🎒 Travel</button>
+        <button class="filter-btn" data-filter="selfies" role="tab" aria-selected="false">💖 Selfies</button>
+        <button class="filter-btn" data-filter="special" role="tab" aria-selected="false">✨ Special Moments</button>
+      </div>
+
+      <!-- Cork Board Photo Wall -->
+      <div class="corkboard" id="corkboard">
+        <div class="corkboard-grid" id="gallery-grid">
+          <!-- Photo 1 -->
+          <div class="gallery-card polaroid-card corkboard-card" data-category="special" role="button"
+            aria-haspopup="dialog">
+            <div class="pushpin pushpin-red"></div>
+            <span class="washi-tape washi-pink"></span>
+            <img src="/assets/pic-1-BI5rvL6n.jpeg" alt="Welcome cover photo">
+            <div class="polaroid-caption">Welcome 💙</div>
+          </div>
+
+          <!-- Photo 2 -->
+          <div class="gallery-card polaroid-card corkboard-card" data-category="special" role="button"
+            aria-haspopup="dialog">
+            <div class="pushpin pushpin-blue"></div>
+            <span class="washi-tape washi-purple"></span>
+            <img src="/assets/pic-2-CXJAp1wl.jpeg" alt="Traditional Outfit Unbreakable Bond">
+            <div class="polaroid-caption">Unbreakable Bond 🔗</div>
+          </div>
+
+          <!-- Photo 3 -->
+          <div class="gallery-card polaroid-card corkboard-card" data-category="cafe" role="button"
+            aria-haspopup="dialog">
+            <div class="pushpin pushpin-gold"></div>
+            <span class="washi-tape washi-gold"></span>
+            <img src="/assets/pic-16-CwgP9G0n.jpeg" alt="Restaurant selfie first memory">
+            <div class="polaroid-caption">First Memories</div>
+          </div>
+
+          <!-- Photo 4 -->
+          <div class="gallery-card polaroid-card corkboard-card" data-category="trips" role="button"
+            aria-haspopup="dialog">
+            <div class="pushpin pushpin-red"></div>
+            <span class="washi-tape washi-grey"></span>
+            <img src="/assets/pic-4-3M39-KbR.jpeg" alt="Thumbs up trip adventure begins">
+            <div class="polaroid-caption">Adventure Begins 🎒</div>
+          </div>
+
+          <!-- Photo 5 -->
+          <div class="gallery-card polaroid-card corkboard-card" data-category="birthdays" role="button"
+            aria-haspopup="dialog">
+            <div class="pushpin pushpin-blue"></div>
+            <span class="washi-tape washi-pink"></span>
+            <img src="/assets/pic-5-Cb5H_tGj.jpeg" alt="Birthday cake celebration">
+            <div class="polaroid-caption">Celebrating Together 🍰</div>
+          </div>
+
+          <!-- Photo 6 -->
+          <div class="gallery-card polaroid-card corkboard-card" data-category="trips" role="button"
+            aria-haspopup="dialog">
+            <div class="pushpin pushpin-gold"></div>
+            <span class="washi-tape washi-purple"></span>
+            <img src="/assets/pic-6-CTPmkgi9.jpeg" alt="Mountain road trip nature">
+            <div class="polaroid-caption">Nature & Friendship 🌄</div>
+          </div>
+
+          <!-- Photo 7 -->
+          <div class="gallery-card polaroid-card corkboard-card" data-category="special" role="button"
+            aria-haspopup="dialog">
+            <div class="pushpin pushpin-red"></div>
+            <span class="washi-tape washi-gold"></span>
+            <img src="/assets/pic-7-Szc4umb4.jpeg" alt="Walkway park walking together">
+            <div class="polaroid-caption">Walking Together 🚶‍♂️</div>
+          </div>
+
+          <!-- Photo 8 -->
+          <div class="gallery-card polaroid-card corkboard-card" data-category="cafe" role="button"
+            aria-haspopup="dialog">
+            <div class="pushpin pushpin-blue"></div>
+            <span class="washi-tape washi-grey"></span>
+            <img src="/assets/pic-8-Br4Mj_Bs.jpeg" alt="Park bench peaceful conversation">
+            <div class="polaroid-caption">Peaceful Conversations 💬</div>
+          </div>
+
+          <!-- Photo 9 -->
+          <div class="gallery-card polaroid-card corkboard-card" data-category="college" role="button"
+            aria-haspopup="dialog">
+            <div class="pushpin pushpin-gold"></div>
+            <span class="washi-tape washi-pink"></span>
+            <img src="/assets/pic-9-CN0yBYBi.jpeg" alt="College classroom learning together">
+            <div class="polaroid-caption">New Places, Same Bond 🗺️</div>
+          </div>
+
+          <!-- Photo 10 -->
+          <div class="gallery-card polaroid-card corkboard-card" data-category="trips" role="button"
+            aria-haspopup="dialog">
+            <div class="pushpin pushpin-red"></div>
+            <span class="washi-tape washi-purple"></span>
+            <img src="/assets/pic-10-CbL6tGly.jpeg" alt="Railway station journey photo">
+            <div class="polaroid-caption">Every Journey Matters 🛤️</div>
+          </div>
+
+          <!-- Photo 11 -->
+          <div class="gallery-card polaroid-card corkboard-card" data-category="selfies" role="button"
+            aria-haspopup="dialog">
+            <div class="pushpin pushpin-blue"></div>
+            <span class="washi-tape washi-gold"></span>
+            <img src="/assets/pic-11-bs7AAQKX.jpeg" alt="Restaurant smiling selfie happy moments">
+            <div class="polaroid-caption">Smiles Forever 😊</div>
+          </div>
+
+          <!-- Photo 12 -->
+          <div class="gallery-card polaroid-card corkboard-card" data-category="trips" role="button"
+            aria-haspopup="dialog">
+            <div class="pushpin pushpin-gold"></div>
+            <span class="washi-tape washi-grey"></span>
+            <img src="/assets/pic-12-BpA2PoAY.jpeg" alt="Mountain standing Ooty trip">
+            <div class="polaroid-caption">Exploring Together 🗻</div>
+          </div>
+
+          <!-- Photo 13 -->
+          <div class="gallery-card polaroid-card corkboard-card" data-category="special" role="button"
+            aria-haspopup="dialog">
+            <div class="pushpin pushpin-red"></div>
+            <span class="washi-tape washi-pink"></span>
+            <img src="/assets/pic-13-CRxeZEqa.jpeg" alt="Black & White photo fun moments">
+            <div class="polaroid-caption">Forever Friends 🎞️</div>
+          </div>
+
+          <!-- Photo 14 -->
+          <div class="gallery-card polaroid-card corkboard-card" data-category="trips" role="button"
+            aria-haspopup="dialog">
+            <div class="pushpin pushpin-blue"></div>
+            <span class="washi-tape washi-purple"></span>
+            <img src="/assets/pic-14-aUNjGwJZ.jpeg" alt="Ooty town vacation photo">
+            <div class="polaroid-caption">Learning Together 📚</div>
+          </div>
+
+          <!-- Photo 15 -->
+          <div class="gallery-card polaroid-card corkboard-card" data-category="trips" role="button"
+            aria-haspopup="dialog">
+            <div class="pushpin pushpin-gold"></div>
+            <span class="washi-tape washi-gold"></span>
+            <img src="/assets/pic-15-hrAY8ZfS.jpeg" alt="Ooty viewpoint final adventure">
+            <div class="polaroid-caption">Above Every Challenge ⛰️</div>
+          </div>
+
+          <!-- Photo 16 -->
+          <div class="gallery-card polaroid-card corkboard-card" data-category="special" role="button"
+            aria-haspopup="dialog">
+            <div class="pushpin pushpin-red"></div>
+            <span class="washi-tape washi-pink"></span>
+            <img src="/assets/rutu-BXe9HS2F.jpeg" alt="Akash and Rutuja Unbreakable Bond">
+            <div class="polaroid-caption">Unbreakable Bond 🔗</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 📖 Extra Section: 3D Memory Book Flip -->
+    <section id="memory-book" class="memory-book-section torn-top torn-bottom">
+      <div class="section-header">
+        <h2 class="section-title">Chapter 5: <span>Flip Through Our Story 📖</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Turn the pages of our scrapbook album to explore the chapters of our story.</p>
+      </div>
+
+      <!-- 3D Book Layout -->
+      <div class="book-container">
+        <div class="book-cover-left"></div>
+        <div class="book-cover-right"></div>
+
+        <div class="book" id="book">
+          <!-- Page 1 -->
+          <div class="book-page" id="page-1" style="z-index: 10;">
+            <div class="page-front">
+              <h3>Chapter 1: College Days 🎓</h3>
+              <img src="/assets/pic-9-CN0yBYBi.jpeg" alt="College classroom learning together">
+              <p>From classrooms to workplaces, we've always supported each other and learned side-by-side.</p>
+            </div>
+            <div class="page-back">
+              <h3>Chapter 2: First Memories ☕</h3>
+              <img src="/assets/pic-3-aRU47h96.jpeg" alt="Restaurant selfie first memory">
+              <p>A simple day, a simple selfie, but memories that still make us smile.</p>
+            </div>
+          </div>
+
+          <!-- Page 2 -->
+          <div class="book-page" id="page-2" style="z-index: 9;">
+            <div class="page-front">
+              <h3>Chapter 3: Relaxing Moments 🌳</h3>
+              <img src="/assets/pic-8-Br4Mj_Bs.jpeg" alt="Park bench relaxing photo">
+              <p>Some of the best memories are made during the simplest, peaceful conversations.</p>
+            </div>
+            <div class="page-back">
+              <h3>Chapter 4: Walking Together 🚶‍♂️</h3>
+              <img src="/assets/pic-7-Szc4umb4.jpeg" alt="Walkway park walking together">
+              <p>Step by step, memory by memory, our friendship keeps growing stronger.</p>
+            </div>
+          </div>
+
+          <!-- Page 3 -->
+          <div class="book-page" id="page-3" style="z-index: 8;">
+            <div class="page-front">
+              <h3>Chapter 5: Birthdays 🍰</h3>
+              <img src="/assets/pic-5-Cb5H_tGj.jpeg" alt="Birthday cake celebration">
+              <p>Every birthday becomes unforgettable when celebrated with family by heart.</p>
+            </div>
+            <div class="page-back">
+              <h3>Chapter 6: Adventure Begins 🎒</h3>
+              <img src="/assets/pic-4-3M39-KbR.jpeg" alt="Thumbs up trip adventure begins">
+              <p>Every journey becomes special when you're traveling with your best friend.</p>
+            </div>
+          </div>
+
+          <!-- Page 4 -->
+          <div class="book-page" id="page-4" style="z-index: 7;">
+            <div class="page-front">
+              <h3>Chapter 7: Nature & Friendship 🌄</h3>
+              <img src="/assets/pic-6-CTPmkgi9.jpeg" alt="Mountain road trip nature">
+              <p>Beautiful places become even more beautiful with the right company.</p>
+            </div>
+            <div class="page-back">
+              <h3>Chapter 8: Every Journey Matters 🛤️</h3>
+              <img src="/assets/pic-10-CbL6tGly.jpeg" alt="Railway station journey photo">
+              <p>No matter where life takes us, our friendship always travels together.</p>
+            </div>
+          </div>
+
+          <!-- Page 5 -->
+          <div class="book-page" id="page-5" style="z-index: 6;">
+            <div class="page-front">
+              <h3>Chapter 9: Happy Smiles 😊</h3>
+              <img src="/assets/pic-11-bs7AAQKX.jpeg" alt="Restaurant smiling selfie happy moments">
+              <p>A smile shared with a true friend becomes a lifelong memory.</p>
+            </div>
+            <div class="page-back">
+              <h3>Chapter 10: Ooty Trip ⛰️</h3>
+              <img src="/assets/pic-12-BpA2PoAY.jpeg" alt="Mountain standing Ooty trip">
+              <p>Every destination reminds us of another Ooty trip adventure.</p>
+            </div>
+          </div>
+
+          <!-- Page 6 -->
+          <div class="book-page" id="page-6" style="z-index: 5;">
+            <div class="page-front">
+              <h3>Chapter 11: Vacation Logs 🗺️</h3>
+              <img src="/assets/pic-14-aUNjGwJZ.jpeg" alt="Ooty town vacation photo">
+              <p>Exploring new places while creating lifelong memories together.</p>
+            </div>
+            <div class="page-back">
+              <h3>Chapter 12: Above Every Challenge 🗻</h3>
+              <img src="/assets/pic-15-hrAY8ZfS.jpeg" alt="Ooty viewpoint final adventure">
+              <p>Standing together through every high and low of life.</p>
+            </div>
+          </div>
+
+          <!-- Page 7 -->
+          <div class="book-page" id="page-7" style="z-index: 4;">
+            <div class="page-front">
+              <h3>Chapter 13: Forever Friends 🎞️</h3>
+              <img src="/assets/pic-13-CRxeZEqa.jpeg" alt="Black & White photo fun moments">
+              <p>Some memories never fade, just like true friendship and brotherhood.</p>
+            </div>
+            <div class="page-back">
+              <h3>Chapter 14: Traditional Days 👔</h3>
+              <img src="/assets/pic-2-CXJAp1wl.jpeg" alt="Traditional Outfit Unbreakable Bond">
+              <p>Celebrating our culture and friendship in style.</p>
+            </div>
+          </div>
+
+          <!-- Page 8 -->
+          <div class="book-page" id="page-8" style="z-index: 3;">
+            <div class="page-front">
+              <h3>Chapter 15: Welcome Home 🏠</h3>
+              <img src="/assets/pic-1-BI5rvL6n.jpeg" alt="Formal dress cover photo">
+              <p>The start of an unbreakable bond that will last a lifetime.</p>
+            </div>
+            <div class="page-back">
+              <h3>To my dearest Akash...</h3>
+              <p
+                style="font-family: var(--font-handwriting); font-size: 1.55rem; color: var(--ink-purple); margin-top: 2rem; padding: 0 10px;">
+                "Side by side or miles apart, best friends are always close to the heart." 🌿
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-controls">
+        <button class="book-btn" id="book-prev-btn">◀ Prev Page</button>
+        <button class="book-btn" id="book-next-btn">Next Page ▶</button>
+      </div>
+    </section>
+
+    <!-- 💌 Chapter 6: Secret Letter -->
+    <section id="secret-letter" class="secret-letter-section torn-top torn-bottom"
+      style="position: relative; overflow: hidden;">
+      <!-- Floating Hearts, Sparkles & Flowers Background Decorations -->
+      <div class="letter-decorations-wrap" aria-hidden="true">
+        <span class="l-decor decor-heart-1">💖</span>
+        <span class="l-decor decor-sparkle-1">✨</span>
+        <span class="l-decor decor-flower-1">🌸</span>
+        <span class="l-decor decor-butterfly-1">🦋</span>
+        <span class="l-decor decor-heart-2">❤️</span>
+        <span class="l-decor decor-sparkle-2">✨</span>
+      </div>
+
+      <!-- Swaying Quill Illustration -->
+      <div class="letter-quill" aria-hidden="true">🖋️</div>
+
+      <!-- Floating Memory Photos Around the Envelope -->
+      <div class="letter-polaroids-container">
+        <!-- Photo 1: Top Left -->
+        <div class="letter-polaroid photo-tl">
+          <span class="tape-decor tape-blue"></span>
+          <img src="/assets/salu1-BvOufpp0.jpeg" alt="Akash in traditional wear">
+          <div class="photo-caption">My Bestuuu 💫</div>
+        </div>
+        <!-- Photo 2: Bottom Left -->
+        <div class="letter-polaroid photo-bl">
+          <span class="clip-decor">📎</span>
+          <img src="/assets/salu2-Bea746Af.jpeg" alt="Rutuja and Akash memory">
+          <div class="photo-caption">Happy Times ✨</div>
+        </div>
+        <!-- Photo 3: Top Right -->
+        <div class="letter-polaroid photo-tr">
+          <span class="tape-decor tape-pink"></span>
+          <img src="/assets/salu3-B1vhe7kO.jpeg" alt="Akash and Rutuja album page cover">
+          <div class="photo-caption">Unbreakable Bond 🔗</div>
+        </div>
+        <!-- Photo 4: Bottom Right -->
+        <div class="letter-polaroid photo-br">
+          <span class="tape-decor tape-gold"></span>
+          <img src="/assets/salu4-ByE2PDCe.jpeg" alt="Welcome home memory">
+          <div class="photo-caption">Memories 💙</div>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h2 class="section-title">Chapter 6: <span>For Your Eyes Only 💌</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">A handwritten letter from Rutuja. Click the red seal to break it open and slide the
+          letter out.</p>
+      </div>
+
+      <!-- Animated Envelope -->
+      <div class="secret-envelope-container" id="secret-envelope-container" role="button" aria-expanded="false"
+        aria-label="Secret letter envelope. Click the seal to open.">
+        <div class="secret-envelope">
+          <div class="secret-flap"></div>
+          <div class="secret-seal">💝</div>
+          <div class="secret-letter-paper" id="secret-letter-paper">
+            <button class="secret-close-btn" id="secret-close-btn" aria-label="Close Letter">×</button>
+            <div class="letter-header"
+              style="text-align: center; margin-bottom: 1.2rem; border-bottom: 1px dashed rgba(207, 168, 60, 0.3); padding-bottom: 0.5rem;">
+              <h3
+                style="font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--ink-purple); font-weight: 700; margin: 0 0 0.1rem 0;">
+                💌 A Special Letter From Rutuja</h3>
+              <h4
+                style="font-family: 'Great Vibes', cursive; font-size: 1.25rem; color: var(--accent-gold); font-weight: bold; margin: 0;">
+                Only For Aksha ❤️</h4>
+            </div>
+            <div class="letter-content"
+              style="font-family: var(--font-handwriting); font-size: 1.45rem; color: var(--ink-purple); line-height: 1.7; text-align: left; display: flex; flex-direction: column; gap: 0.8rem;">
+              <p
+                style="font-weight: bold; margin: 0; font-family: var(--font-sans); font-size: 1.2rem; color: var(--ink-purple);">
+                Dearest Akash,</p>
+              <p>Happy Birthday to the most amazing best friend and brother I could ever ask for! 🔗💙</p>
+              <p>Looking back at our journey, from our simple greetings to our endless laughs, I feel incredibly
+                grateful to have you in my life. You've been my constant pillar of support, a patient listener, and
+                someone who always brings out the absolute best in me. Your presence makes every challenge easier and
+                every happy moment twice as bright.</p>
+              <p>I cherish all our memories—from studying together to exploring new places, and all the quiet, random
+                conversations in between. You aren't just my best friend; you are family, my brother, and that bond is
+                forever unbreakable.</p>
+              <p>On your special day, I wish you all the success, happiness, good health, and peace of mind in the
+                world. May this new chapter bring you closer to all your dreams, and may your infectious smile never
+                fade.</p>
+              <p
+                style="margin-top: 0.5rem; margin-bottom: 0; font-family: 'Great Vibes', cursive; font-size: 1.6rem; color: var(--accent-gold); text-align: right; line-height: 1;">
+                With Love & Best Wishes,</p>
+              <p style="font-family: 'Great Vibes', cursive; font-size: 1.9rem; color: var(--accent-gold); text-align: right; font-weight: bold; margin: 0; line-height: 1;"
+                class="signature-line">Rutuja ❤️</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="surprise-box" class="surprise-box-section locked-section">
+      <div class="section-header">
+        <h2 class="section-title">Chapter 7: <span>One Last Surprise 🎁</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Click the red gift box to shake it, pop the lid, and release the fireworks!</p>
+      </div>
+
+      <!-- Shaking Gift Box -->
+      <div class="gift-box" id="gift-box" role="button" aria-expanded="false"
+        aria-label="Birthday surprise gift box. Click to open.">
+        <div class="gift-bow"></div>
+        <div class="gift-lid"></div>
+        <div class="gift-body">
+          <div class="gift-ribbon-v"></div>
+          <div class="gift-ribbon-h"></div>
+        </div>
+        <div class="gift-surprise-card" id="gift-surprise-card">
+          "You deserve all the happiness,<br>success,<br>love,<br>and joy in the world." 💙✨
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- ✨ Final Chapter (Ending Screen) -->
+    <section id="ending-screen" class="ending-section torn-top">
+      <!-- Background Floating Memory Collage -->
+      <div class="floating-memories-bg" aria-hidden="true">
+        <div class="floating-polaroid p1"><img src="/assets/pic-4-3M39-KbR.jpeg" alt=""></div>
+        <div class="floating-polaroid p2"><img src="/assets/pic-5-Cb5H_tGj.jpeg" alt=""></div>
+        <div class="floating-polaroid p3"><img src="/assets/pic-6-CTPmkgi9.jpeg" alt=""></div>
+        <div class="floating-polaroid p4"><img src="/assets/pic-7-Szc4umb4.jpeg" alt=""></div>
+        <div class="floating-polaroid p5"><img src="/assets/pic-8-Br4Mj_Bs.jpeg" alt=""></div>
+      </div>
+
+      <div class="rush-logo glowing"
+        style="font-size: 2.8rem; padding: 0.5rem 2.5rem; --rush-rot: -2deg; margin-bottom: 2rem; box-shadow: 0 0 20px rgba(247,213,96,0.5); position: relative; z-index: 10;">
+        RUSH 💙
+      </div>
+      <h2 class="ending-title"
+        style="font-family: var(--font-handwriting); font-size: 2.8rem; margin-bottom: 1.5rem; color: var(--accent-gold-light); position: relative; z-index: 10;">
+        Thank You For Every Memory 💙</h2>
+
+      <!-- Interactive Polaroid Slideshow Widget -->
+      <div class="ending-slideshow-container" style="position: relative; z-index: 10;">
+        <div class="slideshow-polaroid polaroid-card">
+          <span class="washi-tape washi-pink"></span>
+          <div class="slideshow-slides">
+            <div class="slide active"><img src="/assets/pic-9-CN0yBYBi.jpeg" alt="Learning Together">
+              <div class="polaroid-caption">Learning Together 🎓</div>
+            </div>
+            <div class="slide"><img src="/assets/pic-10-CbL6tGly.jpeg" alt="Every Journey Matters">
+              <div class="polaroid-caption">Every Journey Matters 🛤️</div>
+            </div>
+            <div class="slide"><img src="/assets/pic-11-bs7AAQKX.jpeg" alt="Smiles Forever">
+              <div class="polaroid-caption">Smiles Forever 😊</div>
+            </div>
+            <div class="slide"><img src="/assets/pic-12-BpA2PoAY.jpeg" alt="Ooty Adventures">
+              <div class="polaroid-caption">Ooty Adventures 🗻</div>
+            </div>
+            <div class="slide"><img src="/assets/pic-13-CRxeZEqa.jpeg" alt="Forever Friends">
+              <div class="polaroid-caption">Forever Friends 🎞️</div>
+            </div>
+          </div>
+          <!-- Slideshow Navigation Arrows -->
+          <div class="slideshow-controls">
+            <button class="slide-ctrl-btn prev" aria-label="Previous Slide">❮</button>
+            <button class="slide-ctrl-btn next" aria-label="Next Slide">❯</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ending-body"
+        style="font-family: var(--font-notebook); line-height: 1.8; font-size: 1.25rem; position: relative; z-index: 10; margin-top: 2rem;">
+        <p style="margin: 0.5rem 0;">Thank you for every laugh.</p>
+        <p style="margin: 0.5rem 0;">Thank you for every moment.</p>
+        <p style="margin: 0.5rem 0;">Thank you for being my best friend.</p>
+        <p style="margin: 0.5rem 0;">Thank you for being my best brother.</p>
+        <div
+          style="font-size: 2.2rem; font-family: var(--font-handwriting); color: var(--ink-purple); font-weight: bold; margin-top: 2rem; line-height: 1.5;">
+          Happy Birthday Akash 🎂💙
+        </div>
+        <div
+          style="font-size: 1.55rem; font-family: var(--font-handwriting); color: var(--accent-gold); font-weight: bold; margin-top: 1.2rem;">
+          Forever Grateful,<br>
+          Rutuja 💖
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-love">Made with love by <span>Rutuja</span> 🌿</div>
+      <div class="footer-dates">Happy Birthday Akash &bull; 5 July 🎂</div>
+      <div class="footer-watermark">
+        <div class="rush-logo">RUSH 💙</div>
+      </div>
+      <div class="footer-copy">&copy; 2026 Akash & Rutuja. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
